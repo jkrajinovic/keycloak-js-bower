@@ -648,26 +648,26 @@
                 if (! oidcConfiguration) {
                     kc.endpoints = {
                         authorize: function() {
-                            return getRealmUrl() + '/protocol/openid-connect/auth';
+                            return getRealmUrl() + '/protocol/openid-connect-ext/auth';
                         },
                         token: function() {
-                            return getRealmUrl() + '/protocol/openid-connect/token';
+                            return getRealmUrl() + '/protocol/openid-connect-ext/token';
                         },
                         logout: function() {
-                            return getRealmUrl() + '/protocol/openid-connect/logout';
+                            return getRealmUrl() + '/protocol/openid-connect-ext/logout';
                         },
                         checkSessionIframe: function() {
-                            var src = getRealmUrl() + '/protocol/openid-connect/login-status-iframe.html';
+                            var src = getRealmUrl() + '/protocol/openid-connect-ext/login-status-iframe.html';
                             if (kc.iframeVersion) {
                               src = src + '?version=' + kc.iframeVersion;
                             }
                             return src;
                         },
                         register: function() {
-                            return getRealmUrl() + '/protocol/openid-connect/registrations';
+                            return getRealmUrl() + '/protocol/openid-connect-ext/registrations';
                         },
                         userinfo: function() {
-                            return getRealmUrl() + '/protocol/openid-connect/userinfo';
+                            return getRealmUrl() + '/protocol/openid-connect-ext/userinfo';
                         }
                     };
                 } else {
